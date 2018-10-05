@@ -4,79 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="274dp"
         android:layout_height="130dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btJogar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/jokenballzlogo" />
+        app:srcCompat="@drawable/jokenballzlogo"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="41dp" />
 
     <Button
         android:id="@+id/btRanking"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:text="Ranking"
-        app:layout_constraintBottom_toTopOf="@+id/btSobre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="271dp" />
 
     <Button
         android:id="@+id/btSobre"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:text="Sobre"
-        app:layout_constraintBottom_toTopOf="@+id/btSair"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="323dp" />
 
     <Button
         android:id="@+id/btSair"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:text="Sair"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="383dp" />
 
     <Button
         android:id="@+id/btJogar"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:text="Jogar"
-        app:layout_constraintBottom_toTopOf="@+id/btRanking"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="211dp" />
 
 </android.support.constraint.ConstraintLayout>
