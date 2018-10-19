@@ -10,12 +10,11 @@ import java.util.Random
 
 class GameActivity : AppCompatActivity() {
 
-    private val numAleatorio: Random? = null
+    private var numAleatorio: Random? = null
 
     private val PEDRA = 1
     private val PAPEL = 1
     private val TESOURA = 1
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,10 +40,46 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun realizarJogada(jogadaPlayer: Int){
-        val player = MediaPlayer.create(this, R.raw.joke)
+        val jogadaPC = numAleatorio!!.nextInt(3) + 1
+
+        when(jogadaPC){
+            PEDRA -> {ivjogadaPC!!.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.gokupedra))
+                when(jogadaPlayer){
+                    PAPEL -> venceu()
+                    PEDRA -> empatou()
+                    TESOURA -> perdeu()
+                }
+            }
+
+            PAPEL -> {ivjogadaPC!!.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.vegetapapel))
+                when(jogadaPlayer){
+                    PAPEL -> empatou()
+                    PEDRA -> perdeu()
+                    TESOURA -> venceu()
+                }
+            }
+
+            TESOURA -> {ivjogadaPC!!.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.gokutesoura))
+                when(jogadaPlayer) {
+                    PAPEL -> perdeu()
+                    PEDRA -> venceu()
+                    TESOURA -> empatou()
+                }
+
+            }
+        }
     }
 
+    private fun venceu(){
+        tvResultado!!.text = getString(R.string.venceu)
+    }
 
+    private fun perdeu(){
+        tvResultado!!.text = getString(R.string.perdeu)
+    }
 
+    private fun empatou(){
+        tvResultado!!.text = getString(R.string.empatou)
+    }
 
 }
