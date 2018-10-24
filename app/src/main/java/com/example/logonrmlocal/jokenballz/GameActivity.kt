@@ -13,8 +13,8 @@ class GameActivity : AppCompatActivity() {
     private var numAleatorio: Random? = null
 
     private val PEDRA = 1
-    private val PAPEL = 1
-    private val TESOURA = 1
+    private val PAPEL = 2
+    private val TESOURA = 3
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +33,7 @@ class GameActivity : AppCompatActivity() {
             realizarJogada(PAPEL)
         }
 
-        btPedra.setOnClickListener {
+        btTesoura.setOnClickListener {
             ivjogadaPlayer!!.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.gokutesoura))
             realizarJogada(TESOURA)
         }
