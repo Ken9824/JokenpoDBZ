@@ -1,5 +1,6 @@
 package com.example.logonrmlocal.jokenballz
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,8 @@ import java.util.Random
 class GameActivity : AppCompatActivity() {
 
     private var numAleatorio: Random? = null
+    var vidas = 3
+    var score = 0
 
     private val PEDRA = 1
     private val PAPEL = 2
@@ -20,6 +23,9 @@ class GameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+
+        tvVidas!!.text = "Vidas: " + vidas
+        tvScore!!.text = "Score: " + score
 
         numAleatorio = Random()
 
@@ -72,14 +78,32 @@ class GameActivity : AppCompatActivity() {
 
     private fun venceu(){
         tvResultado!!.text = getString(R.string.venceu)
+        score += 2
+        tvScore!!.text = "Score: " + score
     }
 
     private fun perdeu(){
         tvResultado!!.text = getString(R.string.perdeu)
+        vidas -= 1
+        tvVidas!!.text = "Vidas: " + vidas
+
+        if(vidas <= 0){
+            val intent = Intent(this, DerrotaActivity::class.java)
+            startActivity(intent)
+
+            val intentRecebe = Intent(this, DerrotaActivity::class.java)
+            intentRecebe.putExtra("Score ", score)
+            startActivity(intentRecebe)
+            finish()
+        }
+
     }
 
     private fun empatou(){
         tvResultado!!.text = getString(R.string.empatou)
+        score += 1
+        tvScore!!.text = "Score: " + score
+
     }
 
 }

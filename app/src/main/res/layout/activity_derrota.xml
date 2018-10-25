@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DerrotaActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivGokuSad"
+        android:layout_width="1080dp"
+        android:layout_height="1920dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/sadgoku" />
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DerrotaActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Você Perdeu"
+        android:textSize="45sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tvscoreRecebe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:textSize="30sp"
+        android:textColor="#ffffff"/>
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/btJogarNovamente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/alpha"
+        android:text="Jogar Novamente"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>
+</FrameLayout>
