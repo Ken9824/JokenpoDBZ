@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DerrotaActivity"
     android:gravity="center"
+    android:background="@drawable/gokusad"
     android:orientation="vertical">
 
     <ImageView
@@ -22,6 +23,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DerrotaActivity"
+    android:background="@drawable/gokusad"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -53,6 +55,22 @@
         android:layout_height="wrap_content"
         android:background="@color/alpha"
         android:text="Jogar Novamente"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/alpha"
+        android:text="Salvar Score"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/btVoltaMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/alpha"
+        android:text="Voltar ao Menu"
         android:textColor="#ffffff"/>
 
 </LinearLayout>

@@ -78,7 +78,7 @@ class GameActivity : AppCompatActivity() {
 
     private fun venceu(){
         tvResultado!!.text = getString(R.string.venceu)
-        score += 2
+        score += 2000
         tvScore!!.text = "Score: " + score
     }
 
@@ -92,7 +92,7 @@ class GameActivity : AppCompatActivity() {
             startActivity(intent)
 
             val intentRecebe = Intent(this, DerrotaActivity::class.java)
-            intentRecebe.putExtra("Score ", score)
+            intentRecebe.putExtra("Score", score)
             startActivity(intentRecebe)
             finish()
         }
@@ -101,7 +101,7 @@ class GameActivity : AppCompatActivity() {
 
     private fun empatou(){
         tvResultado!!.text = getString(R.string.empatou)
-        score += 1
+        score += 1000
         tvScore!!.text = "Score: " + score
 
     }

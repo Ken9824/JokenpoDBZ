@@ -6,6 +6,7 @@ import android.media.MediaPlayer
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import android.widget.MediaController
 import android.widget.VideoView
@@ -29,6 +30,21 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, GameActivity::class.java)
             startActivity(intent)
         }
+
+        btRanking.setOnClickListener {
+            val intent = Intent(this@MainActivity, RankingActivity::class.java)
+            startActivity(intent)
+        }
+
+        btSobre.setOnClickListener {
+            val intent = Intent(this@MainActivity, SobreActivity::class.java)
+            startActivity(intent)
+        }
+
+        btSair.setOnClickListener {
+            finishAffinity()
+        }
+
     }
 
 
